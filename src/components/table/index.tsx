@@ -14,8 +14,11 @@ const Table = ({ data, config, pageSize }: TableProps) => {
     <div className="table-container">
       <table className="table">
         <TableHeader config={config} />
-
-        <TableBody data={currentData} pageSize={pageSize} config={config} />
+        {data.length > 0 ? (
+          <TableBody data={currentData} pageSize={pageSize} config={config} />
+        ) : (
+          <div className="table-body-row">No data found</div>
+        )}
       </table>
       <TableFooter
         currentPage={currentPage}

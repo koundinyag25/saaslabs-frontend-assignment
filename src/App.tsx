@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="app">
       <div className="table-container">
-        <Table data={tableData} config={config} pageSize={5} />
+        <Table data={tableData} config={config} pageSize={10} />
       </div>
     </div>
   );

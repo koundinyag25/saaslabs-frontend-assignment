@@ -25,11 +25,15 @@ const TableFooter = ({
       <div
         className="table-footer-button"
         onClick={() => handleNextAndPrev("prev")}
+        data-testid="prev-button"
       >
         &#8249;
       </div>
-      {currentPage} / {totalPages}
+      <div className="table-footer-page-number" data-testid="page-number">
+        {currentPage} / {totalPages}
+      </div>
       <div
+        data-testid="next-button"
         className="table-footer-button"
         onClick={() => handleNextAndPrev("next")}
       >
